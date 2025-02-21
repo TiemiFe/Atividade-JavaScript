@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Genshin Impact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #1e3d58;
+            color: #ffffff;
+            padding: 60px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        main {
+            padding: 20px;
+        }
+        .content {
+            display: flex;
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            justify-content: space-between;
+        }
+        .aventura {
+            background-color: #4a90e2;
+            color: white;
+        }
+        .liyue {
+            background-color: #f4a261; 
+            color: white;
+        }
+        .aventura img, .liyue img {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            margin-left: 20px;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #1e3d58;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3b5f78;
+        }
+    </style>
+    <script>
+        // O Evento onload - é quando a página for carregada
+        function carregarPagina() {
+            alert("Bem-vindo ao Blog de Genshin Impact! :)) Prepare-se para explorar Teyvat!");
+        }
+
+        // O evento onchange - é quando o usuário muda o valor de uma opção de personagem
+        function selecionarPersonagem() {
+            var personagem = document.getElementById("personagem").value;
+            alert("Você selecionou: " + personagem);
+        }
+
+        // O wvento onclick - é quando o usuário clica no botão "Curtir"
+        function curtirPost() {
+            alert("Você curtiu o post! Obrigado pelo apoio!");
+        }
+    </script>
+</head>
+<body onload="carregarPagina()">
+    <header>
+        <h1>Blog de Genshin Impact</h1>
+        <p>Explorando o vasto mundo de Teyvat e suas aventuras épicas!</p>
+    </header>
+    
+    <main>
+        <div class="content aventura">
+            <div>
+                <h2>Aventuras em Mondstadt</h2>
+                <p>Em Mondstadt, você vai descobrir uma cidade cheia de história, onde o vento é livre, e os aventureiros têm seu lugar. Não se esqueça de explorar os campos de flores e a imponente Catedral de Favonius!</p>
+                <button onclick="curtirPost()">Curtir</button>
+            </div>
+            <img src="mondstadt.jpg" alt="Imagem de Mondstadt">
+        </div>
+
+        <div class="content liyue">
+            <div>
+                <h2>Explorando Liyue</h2>
+                <p>Liyue, uma cidade cheia de tradições, comércio e mistérios, é um dos locais mais fascinantes de Teyvat. Descubra os segredos que guardam as montanhas e o porto de Liyue.</p>
+                <button onclick="curtirPost()">Curtir</button>
+            </div>
+            <img src="Liyue.jpg" alt="Imagem de Liyue">
+        </div>
+
+        <div class="content">
+            <h2>Selecione seu Personagem Favorito</h2>
+            <select id="personagem" onchange="selecionarPersonagem()">
+                <option value="Amber">Amber</option>
+                <option value="Diluc">Diluc</option>
+                <option value="Venti">Venti</option>
+                <option value="Zhongli">Zhongli</option>
+                <option value="Keqing">Keqing</option>
+            </select>
+        </div>
+    </main>
+</body>
+</html>
